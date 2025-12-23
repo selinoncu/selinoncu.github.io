@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İki Dünyayı Taşımak - Selin Öncü</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="splash-screen">
+        <div class="hero-circle"></div>
+        <h1 class="hero-title animate-up">İKİ DÜNYAYI TAŞIMAK</h1>
+        <div class="hero-subtitle animate-up delay-1">BELGESEL • SOSYAL MEDYA • AFİŞ SERİSİ</div>
+        <p class="hero-desc animate-up delay-2">
+            Ebeveynlerin sadece "bakım veren" değil, hayalleri, mücadeleleri ve kendilerine has hikayeleriyle var olan bireyler olduğunu hatırlatan dijital bir farkındalık yolculuğu.
+        </p>
+        <button onclick="enterSite()" class="btn btn-white animate-up delay-3">Hikayeyi Keşfet</button>
+    </section>
+
+    <header id="main-header" class="hidden">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-text">İKİ DÜNYAYI<br>TAŞIMAK</a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="projeler.html">Projeler</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="iletisim.html">İletişim</a>
+            <div style="margin-top: 20px; display: flex; gap: 20px;">
+                <a href="https://instagram.com" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="hidden">
+        <div class="page-section">
+            <div class="section-padding" style="flex-grow: 1;">
+                <div class="container home-split">
+                    <div class="home-text">
+                        <h2 class="big-heading animate-up gradient-text">ENGELLİ ÇOCUĞA<br>SAHİP EBEVEYNLERİN<br>GÖRÜNMEYEN<br>HİKAYESİ</h2>
+                        <p class="animate-up delay-1">
+                            Bu proje, İzmir’de yaşayan ebeveynlerin sesini duyurmayı, deneyimlerini paylaşmayı ve birbirimizden güç almayı hedefliyor. Sadece zorlukları değil, umudu ve dayanışmayı da konuşuyoruz.
+                        </p>
+                        <a href="projeler.html" class="btn btn-primary animate-up delay-2">Projeler</a>
+                    </div>
+                    <div class="image-side animate-up delay-2">
+                        <div class="placeholder-box"></div>
+                        <div class="partner-logos-right">
+                            <small class="partner-text">Bu proje İzmir Kent Konseyi Engelli Meclisi iş birliği ile yürütülmektedir.</small>
+                            <img src="yasar.png" alt="Logo">
+                            <img src="kentkonseyi.png" alt="Logo">
+                            <img src="engellimeclisi.png" alt="Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <div class="container">
+                    <p style="font-weight:700; margin-bottom:10px;">2025 - 2026 Selin Öncü - Bitirme Projesi</p>
+                    <p style="opacity:0.7;">Danışmanlar: Dr. Mert Seven, Dr. Simge Gökbayrak Yelken</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
