@@ -6,25 +6,30 @@
     <title>İki Dünyayı Taşımak - Selin Öncü</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <section id="splash-screen">
-        <div class="hero-circle"></div>
+        <div class="hero-circle">
+            <img src="websitelogoacik.png" alt="İki Dünyayı Taşımak Logo" class="white-filter">
+        </div>
         <h1 class="hero-title animate-up">İKİ DÜNYAYI TAŞIMAK</h1>
         <div class="hero-subtitle animate-up delay-1">BELGESEL • SOSYAL MEDYA • AFİŞ SERİSİ</div>
         <p class="hero-desc animate-up delay-2">
             Ebeveynlerin sadece "bakım veren" değil, hayalleri, mücadeleleri ve kendilerine has hikayeleriyle var olan bireyler olduğunu hatırlatan dijital bir farkındalık yolculuğu.
         </p>
-        <button onclick="enterSite()" class="btn btn-white animate-up delay-3">Hikayeyi Keşfet</button>
+        <button id="enter-btn" class="btn btn-white animate-up delay-3">Hikayeyi Keşfet</button>
     </section>
 
     <header id="main-header" class="hidden">
         <div class="container nav-container">
-            <a href="index.html" class="logo-text">İKİ DÜNYAYI<br>TAŞIMAK</a>
+            <a href="index.html" class="logo-area">
+                <img src="websitelogokoyu.png" alt="Logo" class="nav-logo-img">
+                <span class="logo-text">İKİ DÜNYAYI<br>TAŞIMAK</span>
+            </a>
             
             <nav>
                 <ul class="nav-links">
@@ -63,13 +68,19 @@
                 <div class="container home-split">
                     <div class="home-text">
                         <h2 class="big-heading animate-up gradient-text">ENGELLİ ÇOCUĞA<br>SAHİP EBEVEYNLERİN<br>GÖRÜNMEYEN<br>HİKAYESİ</h2>
-                        <p class="animate-up delay-1">
+                        <p class="animate-up delay-1" style="font-size: 1.1rem; color:#555; margin-bottom: 30px;">
                             Bu proje, İzmir’de yaşayan ebeveynlerin sesini duyurmayı, deneyimlerini paylaşmayı ve birbirimizden güç almayı hedefliyor. Sadece zorlukları değil, umudu ve dayanışmayı da konuşuyoruz.
                         </p>
                         <a href="projeler.html" class="btn btn-primary animate-up delay-2">Projeler</a>
                     </div>
+                    
                     <div class="image-side animate-up delay-2">
-                        <div class="placeholder-box"></div>
+                        <div class="banner-container">
+                            <div class="banner-slide slide-1 active"></div>
+                            <div class="banner-slide slide-2"></div>
+                            <div class="banner-slide slide-3"></div>
+                        </div>
+                        
                         <div class="partner-logos-right">
                             <small class="partner-text">Bu proje İzmir Kent Konseyi Engelli Meclisi iş birliği ile yürütülmektedir.</small>
                             <img src="yasar.png" alt="Logo">
