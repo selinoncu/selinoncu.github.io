@@ -17,46 +17,52 @@ document.addEventListener('DOMContentLoaded', () => {
     
     navLinks.forEach(link => {
         link.classList.remove('active');
-        // Eğer dosya adı eşleşiyorsa veya ana sayfadaysak aktif yap
         if(link.getAttribute('href') === currentPath || (currentPath === '' && link.getAttribute('href') === 'index.html')) {
             link.classList.add('active');
         }
     });
 
-    // --- 3. AÇILIŞ EKRANI MANTIĞI (DÜZELTİLEN KISIM) ---
+    // --- 3. BANNER SLIDER ---
+    const slides = document.querySelectorAll('.banner-slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        const slideInterval = 4000; 
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, slideInterval);
+    }
+
+    // --- 4. AÇILIŞ EKRANI MANTIĞI (ÖNEMLİ KISIM) ---
     const splashScreen = document.getElementById('splash-screen');
     const mainHeader = document.getElementById('main-header');
     const mainContent = document.getElementById('main-content');
-    
-    // Butonu hem ID hem de HTML yapısından bulmaya çalışalım (Garanti olsun)
-    const enterBtn = document.getElementById('enter-btn') || document.querySelector('#splash-screen button');
+    const enterBtn = document.getElementById('enter-btn');
 
     if (splashScreen) {
-        // KONTROL: Kullanıcı daha önce giriş yaptı mı?
+        // Kontrol: Daha önce giriş yapıldı mı?
         if (sessionStorage.getItem('siteGirisYapildi') === 'true') {
-            // EVET: Açılış ekranını hemen yok et, içeriği göster
+            // Evet yapıldı, direkt içeriği göster, splash'i sil.
             splashScreen.style.display = 'none';
             if(mainHeader) mainHeader.classList.remove('hidden');
             if(mainContent) mainContent.classList.remove('hidden');
         } else {
-            // HAYIR: İlk giriş, açılış ekranı kalsın.
-            
-            // Eğer butonda eski onclick varsa temizle
+            // Hayır, ilk giriş. Butona tıklamayı bekle.
             if(enterBtn) {
-                enterBtn.removeAttribute('onclick');
-                
-                // Tıklama olayını ekle
                 enterBtn.addEventListener('click', () => {
-                    // Efektli geçiş
+                    // Animasyonlu çıkış
                     splashScreen.style.opacity = '0';
+                    splashScreen.style.transition = 'opacity 0.8s ease'; 
                     
                     setTimeout(() => {
                         splashScreen.style.display = 'none';
                         if(mainHeader) mainHeader.classList.remove('hidden');
                         if(mainContent) mainContent.classList.remove('hidden');
-                    }, 500); // 0.5sn animasyon süresi
+                    }, 800); 
 
-                    // Tarayıcıya "Giriş Yapıldı" notunu kaydet
+                    // Tarayıcıya not düş: Giriş yapıldı.
                     sessionStorage.setItem('siteGirisYapildi', 'true');
                     window.scrollTo(0, 0);
                 });
