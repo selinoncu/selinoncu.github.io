@@ -31,8 +31,8 @@
             </nav>
 
             <div class="social-icons">
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/ikidunyayitasimak/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@%C4%B0kiD%C3%BCnyay%C4%B1Ta%C5%9F%C4%B1mak" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
 
             <div class="hamburger" id="hamburger-btn">
@@ -48,8 +48,8 @@
             <a href="hakkimizda.html">Hakkımızda</a>
             <a href="iletisim.html">İletişim</a>
             <div style="margin-top: 20px; display: flex; gap: 20px;">
-                <a href="https://instagram.com" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/ikidunyayitasimak/" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@%C4%B0kiD%C3%BCnyay%C4%B1Ta%C5%9F%C4%B1mak" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </header>
@@ -68,36 +68,40 @@
                                 <span>selinoncu7@gmail.com</span>
                             </div>
                             
-                            <div class="contact-item">
+                            <a href="https://www.youtube.com/@%C4%B0kiD%C3%BCnyay%C4%B1Ta%C5%9F%C4%B1mak" target="_blank" class="contact-item">
                                 <div class="c-icon"><i class="fab fa-youtube"></i></div>
                                 <span>İki Dünyayı Taşımak</span>
-                            </div>
+                            </a>
                             
-                            <div class="contact-item">
+                            <a href="https://www.instagram.com/ikidunyayitasimak/" target="_blank" class="contact-item">
                                 <div class="c-icon"><i class="fab fa-instagram"></i></div>
                                 <span>@ikidunyayitasimak</span>
-                            </div>
+                            </a>
                             
                             <div style="margin-top: 50px; color: #5fa4d6; font-weight: 700; font-size: 1.2rem;">#İkiDünyaTekHayat</div>
                         </div>
                         
                         <div class="contact-form-card">
-                            <form>
+                            <form action="https://formsubmit.co/selinoncu7@gmail.com" method="POST">
+                                <input type="hidden" name="_subject" value="Websitenizden Yeni Bir Mesaj Var!">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+
                                 <div style="margin-bottom: 20px;">
-                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">Ad</label>
-                                    <input type="text" class="form-control">
+                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">Ad <span style="color: #e74c3c;">*</span></label>
+                                    <input type="text" name="Ad" class="form-control" required>
                                 </div>
                                 <div style="margin-bottom: 20px;">
-                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">Soyad</label>
-                                    <input type="text" class="form-control">
+                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">Soyad <span style="color: #e74c3c;">*</span></label>
+                                    <input type="text" name="Soyad" class="form-control" required>
                                 </div>
                                 <div style="margin-bottom: 20px;">
-                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">E-posta</label>
-                                    <input type="email" class="form-control">
+                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">E-posta <span style="color: #e74c3c;">*</span></label>
+                                    <input type="email" name="Email" class="form-control" required>
                                 </div>
                                 <div style="margin-bottom: 20px;">
-                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">Mesaj</label>
-                                    <textarea class="form-control" rows="5"></textarea>
+                                    <label style="display:block; margin-bottom:8px; font-weight: 600;">Mesaj <span style="color: #e74c3c;">*</span></label>
+                                    <textarea name="Mesaj" class="form-control" rows="5" required></textarea>
                                 </div>
                                 <button type="submit" class="btn-submit">Gönder</button>
                             </form>
