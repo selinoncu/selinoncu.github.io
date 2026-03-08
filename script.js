@@ -35,15 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }, slideInterval);
     }
 
-    // --- 4. AÇILIŞ EKRANI MANTIĞI (ÖNEMLİ KISIM) ---
+    // --- 4. AÇILIŞ EKRANI MANTIĞI ---
     const splashScreen = document.getElementById('splash-screen');
     const mainHeader = document.getElementById('main-header');
     const mainContent = document.getElementById('main-content');
     const enterBtn = document.getElementById('enter-btn');
 
     if (splashScreen) {
-        // Kontrol: Daha önce giriş yapıldı mı?
-        if (sessionStorage.getItem('siteGirisYapildi') === 'true') {
+        // Kontrol: Daha önce giriş yapıldı mı? (Kalıcı hafıza localStorage ile kontrol ediliyor)
+        if (localStorage.getItem('siteGirisYapildi') === 'true') {
             // Evet yapıldı, direkt içeriği göster, splash'i sil.
             splashScreen.style.display = 'none';
             if(mainHeader) mainHeader.classList.remove('hidden');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 800); 
 
                     // Tarayıcıya not düş: Giriş yapıldı.
-                    sessionStorage.setItem('siteGirisYapildi', 'true');
+                    localStorage.setItem('siteGirisYapildi', 'true');
                     window.scrollTo(0, 0);
                 });
             }
