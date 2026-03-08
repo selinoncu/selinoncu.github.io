@@ -9,6 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <script>
+        if (localStorage.getItem('siteGirisYapildi') === 'true') {
+            let css = '#splash-screen { display: none !important; } #main-header, #main-content { display: block !important; }';
+            let style = document.createElement('style');
+            style.appendChild(document.createTextNode(css));
+            document.head.appendChild(style);
+        }
+    </script>
 </head>
 <body>
 
@@ -41,8 +50,8 @@
             </nav>
 
             <div class="social-icons">
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/ikidunyayitasimak/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@%C4%B0kiD%C3%BCnyay%C4%B1Ta%C5%9F%C4%B1mak" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
 
             <div class="hamburger">
@@ -56,8 +65,8 @@
             <a href="hakkimizda.html">Hakkımızda</a>
             <a href="iletisim.html">İletişim</a>
             <div style="margin-top: 20px; display: flex; gap: 20px;">
-                <a href="https://instagram.com" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/ikidunyayitasimak/" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@%C4%B0kiD%C3%BCnyay%C4%B1Ta%C5%9F%C4%B1mak" target="_blank" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </header>
