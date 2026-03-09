@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     
     <script>
-        if (localStorage.getItem('siteGirisYapildi') === 'true') {
+        if (sessionStorage.getItem('siteGirisYapildi') === 'true') {
             let css = '#splash-screen { display: none !important; } #main-header, #main-content { display: block !important; }';
             let style = document.createElement('style');
             style.appendChild(document.createTextNode(css));
@@ -26,7 +26,7 @@
             <img src="websitelogoacik.png" alt="İki Dünyayı Taşımak Logo" class="white-filter">
         </div>
         <h1 class="hero-title animate-up">İKİ DÜNYAYI TAŞIMAK</h1>
-        <div class="hero-subtitle animate-up delay-1">BELGESEL • SOSYAL MEDYA • AFİŞ SERİSİ</div>
+        <div class="hero-subtitle animate-up delay-1">BELGESEL • SOSYAL MEDYA • PODCAST • BLOG</div>
         <p class="hero-desc animate-up delay-2">
             Ebeveynlerin sadece "bakım veren" değil, hayalleri, mücadeleleri ve kendilerine has hikayeleriyle var olan bireyler olduğunu hatırlatan dijital bir farkındalık yolculuğu.
         </p>
