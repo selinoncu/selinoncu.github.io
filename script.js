@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const enterBtn = document.getElementById('enter-btn');
 
     if (splashScreen) {
-        // Kontrol: Daha önce giriş yapıldı mı? (Kalıcı hafıza localStorage ile kontrol ediliyor)
-        if (localStorage.getItem('siteGirisYapildi') === 'true') {
+        // Kontrol: Daha önce giriş yapıldı mı? (Geçici oturum hafızası sessionStorage ile kontrol ediliyor)
+        if (sessionStorage.getItem('siteGirisYapildi') === 'true') {
             // Evet yapıldı, direkt içeriği göster, splash'i sil.
             splashScreen.style.display = 'none';
             if(mainHeader) mainHeader.classList.remove('hidden');
@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         if(mainContent) mainContent.classList.remove('hidden');
                     }, 800); 
 
-                    // Tarayıcıya not düş: Giriş yapıldı.
-                    localStorage.setItem('siteGirisYapildi', 'true');
+                    // Tarayıcıya not düş: Giriş yapıldı (Sadece sekmeyi kapatana kadar hatırlar)
+                    sessionStorage.setItem('siteGirisYapildi', 'true');
                     window.scrollTo(0, 0);
                 });
             }
