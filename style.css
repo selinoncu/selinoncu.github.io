@@ -12,7 +12,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     background: linear-gradient(180deg, #f4f8fb 0%, #eef2f5 100%);
     color: var(--text-dark); 
     line-height: 1.6; 
